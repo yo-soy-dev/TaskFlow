@@ -16,7 +16,7 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173', credentials: true }));
+app.use(cors({ origin: process.env.CLIENT_URL || 'https://task-flow-xi-hazel.vercel.app', credentials: true }));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 if (process.env.NODE_ENV !== 'test') {
@@ -27,6 +27,22 @@ if (process.env.NODE_ENV !== 'test') {
 app.get('/api/health', (req, res) => {
   res.json({ success: true, message: 'Task Manager API is running 🚀', timestamp: new Date() });
 });
+
+// Root route
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: '🚀 TaskFlow API',
+    version: '1.0.0',
+    endpoints: {
+      health: '/api/health',
+      auth: '/api/auth',
+      tasks: '/api/tasks',
+      users: '/api/users',
+    },
+  });
+});
+
 
 // API Routes
 app.use('/api/auth', authRoutes);
