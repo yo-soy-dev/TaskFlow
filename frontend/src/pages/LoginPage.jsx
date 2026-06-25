@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useAuth } from '../context/AuthContext';
+import logo from '../assets/taskflow.png';
+
 
 const LoginPage = () => {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -34,11 +36,16 @@ const LoginPage = () => {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <div className="auth-logo">
-          <div className="auth-logo-icon">✓</div>
+        <div className="auth-logo" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 28 }}>
+          <img
+            src={logo}
+            alt="TaskFlow"
+            style={{ width: 70, height: 70, borderRadius: 20, objectFit: 'cover', marginBottom: 12 }}
+          />
           <h1 className="auth-title">Welcome to TaskFlow</h1>
           <p className="auth-sub">Sign in to manage your tasks</p>
         </div>
+
 
         {/* Demo credentials */}
         <div style={{ display: 'flex', gap: 8, marginBottom: 20 }}>

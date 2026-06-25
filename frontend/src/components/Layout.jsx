@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
+import logo from '../assets/taskflow.png';
+
 
 const NAV = [
     { label: 'Dashboard', icon: '⊞', path: '/dashboard', section: 'Main' },
@@ -46,7 +48,12 @@ const Layout = () => {
             {/* Sidebar */}
             <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
                 <div className="sidebar-logo">
-                    <div className="sidebar-logo-icon">✓</div>
+                    {/* <div className="sidebar-logo-icon">✓</div> */}
+                    <img
+                        src={logo}
+                        alt="TaskFlow"
+                        style={{ width: 36, height: 36, borderRadius: 8, objectFit: 'cover' }}
+                    />
                     <div>
                         <div className="sidebar-logo-text">TaskFlow</div>
                         <div className="sidebar-logo-sub">Task Management System</div>
@@ -108,7 +115,7 @@ const Layout = () => {
                     <div className="header-right">
                         <div className="header-badge">
                             <span className="header-badge-dot" />
-                            {user?.role === 'admin' ? 'Admin' : 'Member'}
+                            {user?.role === 'admin' ? 'Admin' : 'Employee'}
                         </div>
                         <div className="header-avatar">
                             {getInitials(user?.name)}
@@ -123,8 +130,8 @@ const Layout = () => {
 
                 {/* ── Footer ── */}
                 <footer className="app-footer">
-                    <span>Ekana Technologies · Task Management System</span>
-                    <span className="footer-version">All rights reserved © 2026</span>
+                    <span>Ekana Technologies · TaskFlow - Task Management System</span>
+                    <span className="footer-version">Developed by <strong>Soy-Yo-Dev</strong> · All rights reserved © 2026</span>
                 </footer>
 
             </div>
