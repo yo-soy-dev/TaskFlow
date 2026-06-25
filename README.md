@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./client/src/assets/taskflow.png" alt="TaskFlow Logo" width="80" style="border-radius: 16px" />
+<img src="./frontend/src/assets/taskflow.png" alt="TaskFlow Logo" width="80" style="border-radius: 16px" />
 
 # TaskFlow — Task Management System
 
@@ -11,7 +11,7 @@
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org)
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
 
-[🚀 Live Demo](https://task-flow-xi-hazel.vercel.app) · [📦 Backend API](https://your-backend.onrender.com/api/health)
+[🚀 Live Demo](https://task-flow-xi-hazel.vercel.app) · [📦 Backend API](https://taskflow-backend-a0x2.onrender.com/api/health)
 
 </div>
 
