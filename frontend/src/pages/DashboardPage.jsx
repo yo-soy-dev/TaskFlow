@@ -59,7 +59,7 @@ const DashboardPage = () => {
       </div>
 
       {/* Stat Cards */}
-      <div className="stat-grid" style={{ marginBottom: 24 }}>
+      <div className="stat-grid" style={{ marginBottom: 24, gridTemplateColumns: 'repeat(2, 1fr)' }}>
         <StatCard icon="📋" label="Total Tasks" value={stats?.total || 0} color="var(--accent-light)" onClick={() => navigate('/tasks')} />
         <StatCard icon="⏳" label="In Progress" value={stats?.byStatus['in-progress'] || 0} color="var(--info)" />
         <StatCard icon="✅" label="Completed" value={stats?.byStatus.completed || 0} color="var(--success)" />
@@ -68,7 +68,7 @@ const DashboardPage = () => {
       </div>
 
       {/* Charts */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20, marginBottom: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 20, marginBottom: 24 }}>
 
         {/* Status Pie */}
         <div className="card">

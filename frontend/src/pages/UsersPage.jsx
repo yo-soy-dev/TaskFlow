@@ -104,7 +104,7 @@ const UsersPage = () => {
       </div>
 
       {/* Filters */}
-      <div className="toolbar">
+      <div className="toolbar" style={{ overflowX: 'auto', paddingBottom: 4 }} >
         <div className="search-input-wrap" style={{ maxWidth: 280 }}>
           <span className="search-icon">🔍</span>
           <input className="form-input search-input" placeholder="Search users..." value={searchInput} onChange={handleSearchChange} />

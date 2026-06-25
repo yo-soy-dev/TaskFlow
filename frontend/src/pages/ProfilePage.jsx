@@ -60,7 +60,7 @@ const ProfilePage = () => {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 24, padding: 16, background: 'var(--bg-hover)', borderRadius: 'var(--radius)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 24, padding: 16, background: 'var(--bg-hover)', borderRadius: 'var(--radius)' }}>
           <div>
             <div className="form-label">Department</div>
             <div style={{ fontSize: 14 }}>{user?.department || '—'}</div>

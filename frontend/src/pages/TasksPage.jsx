@@ -120,7 +120,7 @@ const TasksPage = () => {
       </div>
 
       {/* Toolbar */}
-      <div className="toolbar">
+      <div className="toolbar" style={{ overflowX: 'auto', paddingBottom: 4 }} >
         <div className="search-input-wrap" style={{ maxWidth: 280 }}>
           <span className="search-icon">🔍</span>
           <input className="form-input search-input" placeholder="Search tasks..." value={searchInput} onChange={handleSearchChange} />
