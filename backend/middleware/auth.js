@@ -9,6 +9,11 @@ const protect = async (req, res, next) => {
       token = req.headers.authorization.split(' ')[1];
     }
 
+    if (!token && req.query.token) {
+      token = req.query.token;
+    }
+
+
     if (!token) {
       return sendError(res, 401, 'Access denied. No token provided.');
     }

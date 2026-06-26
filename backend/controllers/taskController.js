@@ -331,6 +331,11 @@ const downloadAttachment = async (req, res, next) => {
     const fileUrl = attachment.url.replace('http://', 'https://');
     const fileRes = await fetchUrl(fileUrl);
 
+    let filename = attachment.originalName || 'download';
+    if (attachment.mimetype === 'application/pdf' && !filename.endsWith('.pdf')) {
+      filename += '.pdf';
+    }
+
     res.setHeader('Content-Type', attachment.mimetype || 'application/octet-stream');
     res.setHeader('Content-Disposition', `attachment; filename="${attachment.originalName}"`);
 

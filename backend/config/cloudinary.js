@@ -78,18 +78,10 @@ export const uploadToCloudinary = (
 
     const options = {
       folder,
-      // resource_type: "auto",
-      // resource_type: mimetype.startsWith("image/") ? "image" : "raw",
-      // resource_type: isImage ? "image" : "raw",
       resource_type: getResourceType(mimetype),
-      // use_filename: true,
-      // unique_filename: false,
       public_id: filename
-        // ? `${Date.now()}_${filename.replace(/\s+/g, "_")}`
         ? `${Date.now()}_${path.parse(filename).name.replace(/[\s()]/g, '_')}`
         : undefined,
-      //  flags: "attachment",
-      format: mimetype === "application/pdf" ? "pdf" : undefined,
     };
 
     console.log("Upload Options:");
@@ -135,28 +127,6 @@ export const uploadToCloudinary = (
     readable.pipe(uploadStream);
   });
 };
-
-
-// export const uploadToCloudinary = async (
-//   buffer,
-//   folder = "taskflow",
-//   filename = "",
-//   mimetype = "application/octet-stream"
-// ) => {
-//   console.log("Uploading using BASE64...");
-
-//   const base64 = `data:${mimetype};base64,${buffer.toString("base64")}`;
-
-//   const result = await cloudinary.uploader.upload(base64, {
-//     folder,
-//     resource_type: "auto",
-//     public_id: filename
-//       ? `${Date.now()}_${filename.replace(/\s+/g, "_")}`
-//       : undefined,
-//   });
-
-//   return result;
-// };
 
 export const deleteFromCloudinary = async (
   publicId,
