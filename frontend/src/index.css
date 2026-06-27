@@ -141,7 +141,8 @@ ul {
 .page-content {
     flex: 1;
     padding: 24px 32px;
-    margin-top: var(--header-h);
+    padding-top: calc(var(--header-h) + 24px);
+    margin-top: 0;
 }
 
 /* ── Sidebar ────────────────────────────────────── */
@@ -1236,7 +1237,8 @@ ul {
     .page-content {
         flex: 1;
         padding: 16px;
-        margin-top: var(--header-h);
+        padding-top: calc(var(--header-h) + 16px);
+        margin-top: 0;
     }
 
     .app-footer {
@@ -1368,7 +1370,8 @@ ul {
     .page-content {
         flex: 1;
         padding: 12px;
-        margin-top: var(--header-h);
+        padding-top: calc(var(--header-h) + 12px);
+        margin-top: 0;
     }
 
     .app-footer {

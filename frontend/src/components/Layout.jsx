@@ -46,7 +46,7 @@ const Layout = () => {
 
     const visibleNav = NAV.filter(item => !item.adminOnly || isAdmin);
     const sections = [...new Set(visibleNav.map(n => n.section))];
-    const pageTitle = PAGE_TITLES[location.pathname] || 'TaskFlow';
+    const pageTitle = PAGE_TITLES[location.pathname] || 'NeuroTask';
 
     return (
         <div className="app-layout">
@@ -56,11 +56,11 @@ const Layout = () => {
                     {/* <div className="sidebar-logo-icon">✓</div> */}
                     <img
                         src={logo}
-                        alt="TaskFlow"
+                        alt="NeuroTask"
                         style={{ width: 36, height: 36, borderRadius: 8, objectFit: 'cover' }}
                     />
                     <div>
-                        <div className="sidebar-logo-text">TaskFlow</div>
+                        <div className="sidebar-logo-text">NeuroTask</div>
                         <div className="sidebar-logo-sub">Task Management System</div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ const Layout = () => {
 
                 {/* ── Footer ── */}
                 <footer className="app-footer">
-                    <span>Ekana Technologies · TaskFlow - Task Management System</span>
+                    <span>Ekana Technologies · NeuroTask - Task Management System</span>
                     <span className="footer-version">Developed by <strong>Soy-Yo-Dev</strong> · All rights reserved © 2026</span>
                 </footer>
 

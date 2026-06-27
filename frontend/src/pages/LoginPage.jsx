@@ -39,10 +39,10 @@ const LoginPage = () => {
         <div className="auth-logo" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 28 }}>
           <img
             src={logo}
-            alt="TaskFlow"
+            alt="NeuroTask"
             style={{ width: 70, height: 70, borderRadius: 20, objectFit: 'cover', marginBottom: 12 }}
           />
-          <h1 className="auth-title">Welcome to TaskFlow</h1>
+          <h1 className="auth-title">Welcome to NeuroTask</h1>
           <p className="auth-sub">Sign in to manage your tasks</p>
         </div>
 
