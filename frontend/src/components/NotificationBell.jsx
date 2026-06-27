@@ -92,8 +92,8 @@ const NotificationBell = () => {
 
       {open && (
         <div style={{
-          position: 'absolute', top: '110%', right: 0,
-          width: 340, maxHeight: 440,
+          position: 'fixed', top: '64', right: 12,
+          width: 'min(340px, calc(100vw - 24px))', maxHeight: 440,
           background: 'var(--bg-card)', border: '1px solid var(--border)',
           borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-lg)',
           zIndex: 200, overflow: 'hidden', display: 'flex', flexDirection: 'column',
