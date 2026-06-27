@@ -35,7 +35,7 @@ const DashboardPage = () => {
   useEffect(() => {
     taskAPI.getStats()
       .then(({ data }) => setStats(data.data.stats))
-      .catch(() => {})
+      .catch(() => { })
       .finally(() => setLoading(false));
   }, []);
 
@@ -51,7 +51,14 @@ const DashboardPage = () => {
   return (
     <div>
       <div style={{ marginBottom: 28 }}>
-        <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 4 }}>
+        {/* <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 4 }}>
+          Good {greeting}, {user?.name?.split(' ')[0]} 👋
+        </h1> */}
+        <h1 style={{
+          fontSize: 'clamp(18px, 4vw, 24px)',
+          fontWeight: 700,
+          marginBottom: 4
+        }}>
           Good {greeting}, {user?.name?.split(' ')[0]} 👋
         </h1>
         <p style={{ color: 'var(--text-muted)', fontSize: 14 }}>
