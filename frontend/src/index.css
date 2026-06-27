@@ -1179,6 +1179,8 @@ ul {
         min-height: 60px;
         background: var(--bg-secondary);
         border-top: 1px solid var(--border);
+        display: flex;
+        align-items: center;
     }
 
     .sidebar-user-name {
