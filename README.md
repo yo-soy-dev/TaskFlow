@@ -35,12 +35,7 @@ The project is deployed on Vercel (frontend) and Render (backend), with MongoDB 
 
 | Login Page | Activity Log |
 |---------|---------|
-|---|---------|---------|
 | ![Dashboard](./frontend/src/assets/dashboard.png) | ![Tasks](./frontend/src/assets/tasks.png) | 
-
-| Login Page | Activity Log |
-|---|---------|---------|
-| ![Login](./frontend/src/assets/login.png) | ![Activity](./frontend/src/assets/activity.png) |
 
 ---
 
