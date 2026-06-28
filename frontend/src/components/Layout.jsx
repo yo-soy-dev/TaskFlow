@@ -111,7 +111,7 @@ const Layout = () => {
                             style={{ display: 'none' }}
                             id="menu-toggle"
                         >☰</button>
-                        <style>{`@media(max-width:768px){#menu-toggle{display:flex!important}}`}</style>
+                        <style>{`@media(max-width:1024px){#menu-toggle{display:flex!important}}`}</style>
                         <div>
                             <h1 className="header-title">{pageTitle}</h1>
                             <p className="header-sub">Welcome back, {user?.name?.split(' ')[0]} 👋</p>
